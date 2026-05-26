@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tibi a San | Designový kadeřnický salon Praha 7 Holešovice</title>
+  <meta name="description" content="Wella profesionál praha , Praha , sebastian profesionál , sebastien prosfesionel, Olaplex , Exkluzivní, nejlepší, šikovní, spolehlivý, dobrá práce, dobré recenze, levný, designový,  kadeřnický salon Tibi a San v Praze 7. Profesionální vlasoví stylisti , kadeřníci , holičově , umělci tv star, profíci , školitelé,  Sandra a Tibor Němcovi (zkušenosti ze StarDance, TV show, miss, stream.cz, joy, glanc ,kvvf, umělci ).">
+  <meta name="keywords" content="kadeřnictví Praha 7, kadeřnický salon Holešovice, balayage Praha, luxusní kadeřník, Sandra Němcová, Tibor Němec, M Hair,">
+  <link rel="canonical" href="https://tibiasan.cz/">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #111827;
+      line-height: 1.7;
+    }
+    .heading {
+      font-family: Georgia, serif;
+    }
+    .hero {
+      min-height: 92vh;
+      background: linear-gradient(to bottom right, rgba(0,0,0,0.55), rgba(0,0,0,0.7)), url('foto1.jpg') center/cover no-repeat;
+    }
+    .glass {
+      backdrop-filter: blur(14px);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .team-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      transition: all .4s ease;
+    }
+    
+    /* Na stolních počítačích schováme text a ukážeme ho až při najetí myší */
+    @media (min-width: 1024px) {
+      .team-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(0,0,0,.18);
+      }
+      .team-overlay {
+        opacity: 0;
+        transition: all 0.5s ease;
+      }
+      .team-card:hover .team-overlay {
+        opacity: 1;
+      }
+    }
+
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(217, 119, 6, 0.08);
+    }
+    .gold-text {
+      color: #d97706;
+    }
+    
+    /* Mobilní oprava: Stabilita animací, fix pro iPhony a zobrazení skrytých textů na mobilech/tabletech */
+    @media (max-width: 1023px) {
+      [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      .hero {
+        background-attachment: scroll !important;
+      }
+      /* Na telefonu zrušíme absolutní pozici přes fotku a dáme text čitelně pod ni */
+      .team-overlay {
+        position: relative !important;
+        background: #111827 !important;
+        opacity: 1 !important;
+        transform: none !important;
+        padding-top: 1.5rem;
+      }
+      .team-card {
+        background: #111827;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-lg shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="text-3xl md:text-4xl heading tracking-wide font-serif">Tibi a San</div>
+    <div class="hidden md:flex items-center gap-8 text-sm uppercase tracking-wider font-medium">
+      <a href="#o-nas" class="hover:text-amber-600 transition">O nás</a>
+      <a href="#tym" class="hover:text-amber-600 transition">Tým</a>
+      <a href="#sluzby" class="hover:text-amber-600 transition">Služby</a>
+      <a href="#studio" class="hover:text-amber-600 transition">Studio</a>
+      <a href="#kontakt" class="hover:text-amber-600 transition">Kontakt</a>
+      <a href="https://www.reservio.cz/b/tibiho-vlasy" target="_blank" rel="noopener" class="bg-amber-600 text-white px-6 py-3 rounded-full hover:bg-amber-700 transition">Objednat se</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero flex items-center justify-center text-white text-center px-6 pt-16">
+  <div data-aos="fade-up" class="max-w-4xl">
+    <p class="uppercase tracking-[0.4em] text-sm md:text-lg mb-6 text-amber-400 font-medium">Péče o vlasy v srdci Holešovic</p>
+    <h1 class="text-4xl md:text-7xl heading mb-7 tracking-wide">Tibi a San</h1>
+    <p class="text-lg md:text-3xl mb-10 font-light">V salonu M Hair</p>
+    <a href="https://www.reservio.cz/b/tibiho-vlasy" target="_blank" rel="noopener" class="inline-block bg-amber-600 px-10 py-5 rounded-full text-lg font-semibold hover:scale-105 hover:bg-amber-700 transition shadow-lg">Rezervovat termín online</a>
+  </div>
+</header>
+
+<section id="o-nas" class="py-24 px-6 bg-white">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+    <div data-aos="fade-right">
+      <h2 class="text-4xl md:text-6xl heading mb-8">Vítejte u nás</h2>
+      <div class="space-y-6 text-lg text-gray-700">
+        <p>Jsme manželský a profesionální kadeřnický team působící v moderním designovém studiu M Hair v samotném srdci pražských Holešovic.</p>
+        <p>Specializujeme se na precizní střihy, moderní barvicí techniky a styling vlasů. Snažíme se o maximální individuální přístup ke každému klientovi.</p>
+        <p class="font-semibold italic gold-text">Káva, WiFi a nealkoholické nápoje jsou pro vás během návštěvy vždy zdarma.</p>
+      </div>
+    </div>
+    <div data-aos="fade-left">
+      <img src="foto2.jpg" alt="Kadeřnický salon Tibi a San" class="rounded-3xl shadow-2xl w-full object-cover h-[500px]">
+    </div>
+  </div>
+</section>
+
+<section id="tym" class="py-24 bg-gray-50 px-6">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl md:text-6xl heading text-center mb-4">Náš Tým</h2>
+    <p class="text-center text-gray-600 max-w-xl mx-auto mb-16 text-lg">Svěřte své vlasy do rukou kadeřnických profesionálů s mnohaletými zkušenostmi.</p>
+    
+    <div class="grid lg:grid-cols-2 gap-12">
+
+      <div class="team-card shadow-xl group bg-black">
+        <img src="sandra.jpg" alt="Sandra Němcová" class="w-full h-[500px] lg:h-[700px] object-cover opacity-90 lg:group-hover:opacity-20 transition duration-500">
+        <div class="team-overlay lg:absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent text-white p-8 flex flex-col justify-end overflow-y-auto">
+          <h3 class="text-4xl font-bold mb-2">Sandra Němcová</h3>
+          <p class="uppercase text-amber-400 tracking-widest mb-4 font-medium">Senior Hair Stylist & Color Specialistka</p>
+          <div class="space-y-2 text-[14px] text-gray-200 leading-relaxed">
+            <p>Sandra se specializuje na moderní barvicí techniky (balayage, airtouch, melírování) a precizní dámské střihy. Má bohaté zkušenosti s prací v zákulisí módních přehlídek i televizních projektů.</p>
+            <p class="pt-2"><strong>Televizní tvorba:</strong> Dobré ráno (Česká televize)</p>
+            <p><strong>Proměny vizáže:</strong> Pořad New You (Stream.cz), autorka proměn pro Pardubické noviny</p>
+            <p><strong>Sport & Marketing:</strong> Oficiální tvorba účesů při postupu pardubických hokejistů do finále extraligy</p>
+            <p><strong>Stage & Móda:</strong> Přehlídky Osmana Laffity, časopisy Joy, Žena a život, Glanc</p>
+            <p><strong>Kariéra:</strong> Salon Suncity Pardubice, New You, M Hair Praha</p>
+          </div>
+          <a href="tel:+420732939857" class="mt-5 inline-block font-semibold text-amber-400 hover:underline text-lg">+420 732 939 857</a>
+        </div>
+      </div>
+
+      <div class="team-card shadow-xl group bg-black">
+        <img src="tibor.jpg" alt="Tibor Němec" class="w-full h-[500px] lg:h-[700px] object-cover opacity-90 lg:group-hover:opacity-20 transition duration-500">
+        <div class="team-overlay lg:absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent text-white p-8 flex flex-col justify-end overflow-y-auto">
+          <h3 class="text-4xl font-bold mb-2">Tibor Němec</h3>
+          <p class="uppercase text-amber-400 tracking-widest mb-4 font-medium">Senior Hair Stylist</p>
+          <div class="space-y-2 text-[14px] text-gray-200 leading-relaxed">
+            <p>Tibor je uznávaný odborník s mezinárodním vzděláním a dlouholetou praxí. Jako bývalý technolog přední kadeřnické značky se zaměřuje na špičkovou techniku střihu a školení nových trendů.</p>
+            <p class="pt-2"><strong>Kariéra:</strong> Studio 7, Vivendy Salon, Bomton Studio, Studio Wella Praha, zakladatel New You, M Hair</p>
+            <p><strong>Wella Professional:</strong> 7 let působil jako oficiální odborný školitel pro profesionální kadeřníky</p>
+            <p><strong>Zahraniční zkušenosti:</strong> Půlroční kadeřnická stáž v New Yorku, USA</p>
+            <p><strong>TV & Internet:</strong> Vlasový styling pro show StarDance, Bailando, Vypadáš skvěle a projekty na Stream.cz</p>
+            <p><strong>Stage & Vzdělávání:</strong> Absolvent mezinárodních akademií Vidal Sassoon, Toni & Guy, Patrick Cameron</p>
+            <p><strong>Módní přehlídky:</strong> Osmany Laffita, Blanka Matragi, KABO Brno</p>
+            <p><strong>Média & Odborné články:</strong> iDnes.cz, Hair & Beauty, Blesk pro ženy, ProŽeny.cz, Femina, Notino Blog</p>
+          </div>
+          <a href="tel:+420773557782" class="mt-5 inline-block font-semibold text-amber-400 hover:underline text-lg">+420 773 557 782</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="sluzby" class="py-24 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl heading">Naše Služby </h2>
+      <p class="text-gray-500 mt-4 text-lg">Pracujeme výhradně s nejvyššími řadami produktů Wella Professional & Sebastian Professional a péčí Olaplex.</p>
+      <div class="w-20 h-1 bg-amber-600 mx-auto mt-6"></div>
+    </div>
+    
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center" data-aos="fade-up">
+        <h3 class="text-xl font-bold mb-3 heading tracking-wide">Dámský střih</h3>
+        <p class="text-gray-500 text-sm mb-6">Konzultace, mytí, střih, foukaná, finální styling.</p>
+        <span class="text-2xl font-semibold gold-text tracking-tighter">od 1 400 Kč</span>
+      </div>
+
+      <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center" data-aos="fade-up">
+        <h3 class="text-xl font-bold mb-3 heading tracking-wide">Pánský střih</h3>
+        <p class="text-gray-500 text-sm mb-6">Konzultace, mytí, střih nůžkami/strojkem, styling.</p>
+        <span class="text-2xl font-semibold gold-text tracking-tighter">900 Kč</span>
+      </div>
+
+      <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center" data-aos="fade-up">
+        <h3 class="text-xl font-bold mb-3 heading tracking-wide">Balayage / Melír</h3>
+        <p class="text-gray-500 text-sm mb-6">Moderní zesvětlovací techniky s přirozeným přechodem.</p>
+        <span class="text-2xl font-semibold gold-text tracking-tighter">od 3 200 Kč</span>
+      </div>
+
+      <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center" data-aos="fade-up">
+        <h3 class="text-xl font-bold mb-3 heading tracking-wide">Barvení</h3>
+        <p class="text-gray-500 text-sm mb-6">Kompletní barvení nebo dobarvení odrostů prémiovými barvami.</p>
+        <span class="text-2xl font-semibold gold-text tracking-tighter">od 2 600 Kč</span>
+      </div>
+
+      <div class="service-card bg-white rounded-2xl p-6 border border-gray-100 shadow-sm text-center" data-aos="fade-up">
+        <h3 class="text-xl font-bold mb-2 heading tracking-wide uppercase">Smoothfiller™</h3>
+        <p class="text-sm text-gray-500 mb-4">Inovativní hloubková restrukturalizace vlasů. Ideální pro krepaté vlasy a usnadnění domácí péče (nejedná se o Brazilský keratin).</p>
+        <span class="text-2xl font-semibold gold-text tracking-tighter">od 2 700 Kč</span>
+      </div>
+
+      <div class="service-card bg-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center" data-aos="fade-up">
+        <h3 class="text-xl font-bold mb-3 heading tracking-wide">Olaplex péče</h3>
+        <p class="text-gray-500 text-sm mb-6">Intenzivní hloubková regenerace pro obnovu vazeb ve vlasu.</p>
+        <span class="text-2xl font-semibold gold-text tracking-tighter">od 500 Kč</span>
+      </div>
+
+      <div class="service-card bg-amber-50 rounded-2xl p-8 border border-amber-200 text-center shadow-sm lg:col-start-2" data-aos="fade-up">
+        <h3 class="text-xl font-bold mb-3 heading tracking-wide uppercase">Svatební / Společenský účes</h3>
+        <p class="text-gray-600 text-sm mb-6">Účesy pro vaše výjimečné dny a společenské události.</p>
+        <span class="text-lg font-semibold gold-text uppercase">Dle individuální dohody</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="studio" class="py-24 bg-gray-950 text-white px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl md:text-6xl heading mb-14" data-aos="fade-up">Studio</h2>
+    
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
+      <div class="relative p-1 bg-gradient-to-tr from-amber-600/30 to-transparent rounded-[24px]" data-aos="zoom-in">
+        <img src="foto1.jpg" alt="Prostředí salonu M Hair 1" class="rounded-[20px] shadow-2xl w-full h-[300px] object-cover block">
+      </div>
+      <div class="relative p-1 bg-gradient-to-tr from-amber-600/30 to-transparent rounded-[24px]" data-aos="zoom-in" data-aos-delay="100">
+        <img src="foto2.jpg" alt="Prostředí salonu M Hair 2" class="rounded-[20px] shadow-2xl w-full h-[300px] object-cover block">
+      </div>
+      <div class="relative p-1 bg-gradient-to-tr from-amber-600/30 to-transparent rounded-[24px]" data-aos="zoom-in" data-aos-delay="200">
+        <img src="foto3.jpg" alt="Prostředí salonu M Hair 3" class="rounded-[20px] shadow-2xl w-full h-[300px] object-cover block">
+      </div>
+      <div class="relative p-1 bg-gradient-to-tr from-amber-600/30 to-transparent rounded-[24px]" data-aos="zoom-in" data-aos-delay="300">
+        <img src="foto4.jpg" alt="Prostředí salonu M Hair 4" class="rounded-[20px] shadow-2xl w-full h-[300px] object-cover block">
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 text-lg">
+      <div class="glass rounded-3xl p-10 border-t border-amber-500/20 hover:border-amber-500/50 transition-all duration-500 group" data-aos="fade-up">
+        <div class="w-12 h-12 bg-amber-600/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+          <span class="text-amber-500 text-2xl">✦</span>
+        </div>
+        <h3 class="heading text-xl mb-3 tracking-wide">Moderní design</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Prostředí salonu M Hair je navrženo tak, abyste se u nás cítili maximálně komfortně a uvolněně.</p>
+      </div>
+      <div class="glass rounded-3xl p-10 border-t border-amber-500/20 hover:border-amber-500/50 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-12 h-12 bg-amber-600/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+          <span class="text-amber-500 text-2xl">✦</span>
+        </div>
+        <h3 class="heading text-xl mb-3 tracking-wide">Prvotřídní kosmetika</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Používáme výhradně profesionální vlasové produkty špičkových světových značek.</p>
+      </div>
+      <div class="glass rounded-3xl p-10 border-t border-amber-500/20 hover:border-amber-500/50 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-12 h-12 bg-amber-600/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+          <span class="text-amber-500 text-2xl">✦</span>
+        </div>
+        <h3 class="heading text-xl mb-3 tracking-wide">Profesionální přístup</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">Ke každému klientovi přistupujeme individuálně s důrazem na zdraví a přirozenou krásu vlasů.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="py-24 px-5 text-center bg-white">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-4xl md:text-5xl heading mb-12">Kontakt</h2>
+    
+    <div class="text-center space-y-8 text-lg max-w-xl mx-auto mb-16">
+      <div class="space-y-2">
+        <p class="text-3xl font-bold tracking-wide heading gold-text">M Hair</p>
+        <p class="text-gray-800 font-medium">Tusarova 23, 170 00 Praha 7 - Holešovice</p>
+      </div>
+
+      <div class="w-12 h-[1px] bg-amber-200 mx-auto"></div>
+
+      <div class="space-y-3">
+        <p class="text-gray-500 text-sm uppercase tracking-wider font-semibold">Telefonní kontakty</p>
+        <p class="text-gray-800">
+          Sandra Němcová: <a href="tel:+420732939857" class="font-semibold hover:text-amber-600 transition">+420 732 939 857</a>
+        </p>
+        <p class="text-gray-800">
+          Tibor Němec: <a href="tel:+420773557782" class="font-semibold hover:text-amber-600 transition">+420 773 557 782</a>
+        </p>
+        <p class="text-gray-800">
+          Email: <a href="mailto:tiborn@email.cz" class="hover:underline text-amber-700 font-medium">tiborn@email.cz</a>
+        </p>
+      </div>
+
+      <div class="w-12 h-[1px] bg-amber-200 mx-auto"></div>
+
+      <div class="space-y-2">
+        <p class="text-gray-500 text-sm uppercase tracking-wider font-semibold">Otevírací doba</p>
+        <p class="text-gray-800 font-medium">Po-Pá: 8:30h - 21h</p>
+        <p class="text-gray-400 text-sm italic">Návštěvy probíhají dle předchozích objednávek</p>
+      </div>
+
+      <div class="w-12 h-[1px] bg-amber-200 mx-auto"></div>
+
+      <div class="space-y-2 text-sm text-gray-600 max-w-md mx-auto leading-relaxed">
+        <p><strong>Doprava:</strong> Tramvajová zastávka Dělnická nebo Tusarova (linky 1, 25, 34).</p>
+        <p><strong>Parkování:</strong> Modrá zóna přímo na ulici nebo nedaleká Holešovická tržnice.</p>
+      </div>
+    </div>
+
+    <div class="rounded-3xl overflow-hidden shadow-2xl h-[450px]" data-aos="zoom-in">
+      <iframe src="https://maps.google.com/maps?q=Tusarova%2023,%20Praha%207&t=&z=15&ie=UTF-8&iwloc=&output=embed" class="w-full h-full border-0" loading="lazy" title="Kadeřnictví Tibi a San Praha 7 - poloha na mapě"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-black text-gray-400 text-center py-10 text-xs tracking-wider uppercase border-t border-gray-900">
+  © 2026 Tibi a San / Všechna práva vyhrazena. | Tibor Němec IČO: 76155064 | Sandra Němcová IČO: 87016095
+</footer>
+
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
+
+</body>
+</html>
